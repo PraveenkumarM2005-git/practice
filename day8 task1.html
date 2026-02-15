@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Info Form</title>
+        <style>
+        body {
+            background: #f2f2f2;
+            font-family: Arial;
+        }
+        .box {
+            width: 300px;
+            margin: 80px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        input, select {
+            width: 90%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 95%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+    </head>
+    <body>
+
+        <div class="box">
+            <h2>Student Info Form</h2>
+            <input type="text" id="name" value="John">
+            <input type="number" id="age" value="20">
+            <select id="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            <button onclick="showData()">Submit</button>
+        </div>
+
+        <script>
+    function showData() {
+        var n = document.getElementById("name").value;
+        var a = document.getElementById("age").value;
+        var g = document.getElementById("gender").value;
+        alert("Name: " + n + "\nAge: " + a + "\nGender: " + g);
+    }
+</script>
+
+    </body>
+</html>

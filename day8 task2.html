@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arithmetic Operations</title>
+        <style>
+        body {
+            background: #eef3f8;
+            font-family: Arial;
+        }
+        .box {
+            width: 300px;
+            margin: 100px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background: #2196f3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        .result {
+            margin-top: 15px;
+            text-align: left;
+            font-size: 14px;
+        }
+    </style>
+    </head>
+    <body>
+
+        <div class="box">
+            <h2>Arithmetic Operations</h2>
+            <button onclick="calculate()">Show Results</button>
+            <div class="result" id="output"></div>
+        </div>
+
+        <script>
+    function calculate() {
+        var a = 10;
+        var b = 3;
+        var text = "";
+        text += "Addition: " + (a + b) + "<br>";
+        text += "Subtraction: " + (a - b) + "<br>";
+        text += "Multiplication: " + (a * b) + "<br>";
+        text += "Division: " + (a / b).toFixed(2) + "<br>";
+        text += "Modulus: " + (a % b) + "<br>";
+        text += "Exponentiation: " + (a ** b);
+        document.getElementById("output").innerHTML = text;
+    }
+</script>
+
+    </body>
+</html>
