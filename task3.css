@@ -1,0 +1,34 @@
+body {
+    background-image: url("background.jpg"); /* use your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Georgia, serif;
+}
+
+/* Blog Content Box */
+.blog-box {
+    background-color: #f8f8f8;
+    width: 60%;
+    margin: 120px auto;
+    padding: 25px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Heading */
+.blog-box h2 {
+    text-align: center;
+}
+
+/* Text decorations */
+.underline {
+    text-decoration: underline;
+    color: blue;
+}
+
+.highlight {
+    background-color: yellow;
+}

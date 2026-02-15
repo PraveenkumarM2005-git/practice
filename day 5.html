@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Operators Task</title>
+
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        .box {
+            width: 70%;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h3 {
+            color: #0066cc;
+        }
+
+        .result {
+            background: #fafafa;
+            padding: 10px;
+            border: 1px dashed #999;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div class="box">
+            <h2>Javascript Operators Task</h2>
+
+            <div id="result"></div>
+        </div>
+
+        <script>
+    let output = "";
+
+    // 1. Arithmetic Operators
+    let x = 5, y = 3;
+
+    output += "<h3>1. Arithmetic (x = 5, y = 3)</h3>";
+    output += "<div class='result'>";
+    output += "x + y = " + (x + y) + "<br>";
+    output += "x - y = " + (x - y) + "<br>";
+    output += "x * y = " + (x * y) + "<br>";
+    output += "x / y = " + (x / y) + "<br>";
+    output += "x % y = " + (x % y) + "<br>";
+    output += "</div>";
+
+    // 2. Logical Operators
+    let a = true, b = false;
+
+    output += "<h3>2. Logical (A = true, B = false)</h3>";
+    output += "<div class='result'>";
+    output += "A && B = " + (a && b) + "<br>";
+    output += "A || B = " + (a || b) + "<br>";
+    output += "!A = " + (!a) + "<br>";
+    output += "!B = " + (!b) + "<br>";
+    output += "</div>";
+
+    // 3. Assignment Operators
+    let p = 20, q = 40;
+
+    output += "<h3>3. Assignment (p = 20, q = 40)</h3>";
+    output += "<div class='result'>";
+    output += "Start: p = " + p + ", q = " + q + "<br>";
+
+    p += 10;
+    output += "p += 10 → " + p + "<br>";
+
+    q -= 5;
+    output += "q -= 5 → " + q + "<br>";
+
+    p *= 2;
+    output += "p *= 2 → " + p + "<br>";
+
+    q /= 5;
+    output += "q /= 5 → " + q + "<br>";
+
+    output += "</div>";
+
+    document.getElementById("result").innerHTML = output;
+</script>
+
+    </body>
+</html>

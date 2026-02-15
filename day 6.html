@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String & Array Tasks</title>
+
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        .box {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h3 {
+            color: #0066cc;
+            margin-top: 20px;
+        }
+
+        .output {
+            background: #fafafa;
+            padding: 10px;
+            border: 1px dashed #999;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div class="box">
+            <h2>STRING & ARRAY TASKS</h2>
+            <div id="result"></div>
+        </div>
+
+        <script>
+let output = "";
+
+
+let str = "programming";
+
+
+let count = 0;
+for (let i = 0; i < str.length; i++) {
+    count++;
+}
+output += "<h3>1. Count Characters</h3>";
+output += "<div class='output'>String: " + str + "<br>Total Characters: " + count + "</div>";
+
+
+let vowels = 0;
+for (let i = 0; i < str.length; i++) {
+    let ch = str[i].toLowerCase();
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+        vowels++;
+    }
+}
+output += "<h3>2. Count Vowels</h3>";
+output += "<div class='output'>Vowels Count: " + vowels + "</div>";
+
+let reverseStr = "";
+for (let i = str.length - 1; i >= 0; i--) {
+    reverseStr += str[i];
+}
+output += "<h3>3. Reverse String</h3>";
+output += "<div class='output'>Reversed: " + reverseStr + "</div>";
+
+let word = "madam";
+let rev = "";
+for (let i = word.length - 1; i >= 0; i--) {
+    rev += word[i];
+}
+let palindromeResult = (word == rev) ? "Yes, Palindrome" : "Not a Palindrome";
+
+output += "<h3>4. Palindrome Check</h3>";
+output += "<div class='output'>Word: " + word + "<br>Result: " + palindromeResult + "</div>";
+
+
+let name = "javascript";
+let cap = name.charAt(0).toUpperCase() + name.slice(1);
+
+output += "<h3>5. Capitalize First Letter</h3>";
+output += "<div class='output'>Before: " + name + "<br>After: " + cap + "</div>";
+
+
+
+let numbers = [10, 25, 40, 17, 8];
+
+output += "<h3>6. Print All Array Elements</h3>";
+output += "<div class='output'>";
+for (let i = 0; i < numbers.length; i++) {
+    output += numbers[i] + "<br>";
+}
+output += "</div>";
+
+
+let sum = 0;
+for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+}
+output += "<h3>7. Sum of Array Elements</h3>";
+output += "<div class='output'>Sum: " + sum + "</div>";
+
+let largest = numbers[0];
+for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > largest) {
+        largest = numbers[i];
+    }
+}
+output += "<h3>8. Largest Number</h3>";
+output += "<div class='output'>Largest: " + largest + "</div>";
+
+let evenCount = 0;
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 == 0) {
+        evenCount++;
+    }
+}
+output += "<h3>9. Count Even Numbers</h3>";
+output += "<div class='output'>Even Numbers Count: " + evenCount + "</div>";
+
+
+let revArray = [];
+for (let i = numbers.length - 1; i >= 0; i--) {
+    revArray.push(numbers[i]);
+}
+output += "<h3>10. Reverse Array</h3>";
+output += "<div class='output'>" + revArray.join(", ") + "</div>";
+
+
+let fruits = ["Apple", "Banana", "Mango", "Cherry", "Pomegranates", "Papaya"];
+
+output += "<h3>ARRAY TASK</h3>";
+output += "<div class='output'><strong>The array output are:</strong><br><br>";
+
+for (let i = 0; i < fruits.length; i++) {
+    output += fruits[i] + "<br>";
+}
+output += "</div>";
+
+document.getElementById("result").innerHTML = output;
+</script>
+
+    </body>
+</html>
